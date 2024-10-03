@@ -1,9 +1,26 @@
 #include <iostream>
 
-#include "Temp.hpp"
+#include "OM_Engine.hpp"
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    Test();
+    // Initialisation
+    Application app;
+    if(!app.Initialisation())
+    {
+        app.Destroy();
+        return 1;
+    }
+
+    // Game loop
+    while (!app.Window_should_close())
+    {
+        app.Update();
+        app.Render();
+    }
+
+    // Clean
+    app.Destroy();
+    
+    return 0;
 }

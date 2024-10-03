@@ -3,4 +3,5 @@
 *.user
 
 # OM Engine
-x64/
+[Xx]64
+*.log
