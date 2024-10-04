@@ -11,7 +11,7 @@ namespace Wrapper
 	{
 		// Instance
 	public:
-		static Window* Get_instance();
+		static Window* Get_Instance();
 	private:
 		static inline Window* s_instance = nullptr;
 
@@ -22,7 +22,7 @@ namespace Wrapper
 		void Render() const;
 		void Destroy();
 		
-		const bool Window_should_close() const;
+		const bool Window_Should_Close() const;
 
 		// GLFW
 	private:
@@ -32,8 +32,8 @@ namespace Wrapper
 		static const int CLOSE_APP_KEY = GLFW_KEY_ESCAPE;
 		static const int CLOSE_APP_ACTION = GLFW_PRESS;
 
-		static void Display_error(int error, const char* description);
-		static void On_input(GLFWwindow* window, int key, int scancode, int action, int mods);
+		static void Display_Error(int error, const char* description);
+		static void On_Input(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 	};
 }

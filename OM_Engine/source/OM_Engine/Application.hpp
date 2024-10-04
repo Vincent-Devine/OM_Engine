@@ -14,7 +14,7 @@ public:
 
 	// Window
 public:
-	const bool Window_should_close() const;
+	const bool Window_Should_Close() const;
 private:
 	Wrapper::Window* m_window;
 };

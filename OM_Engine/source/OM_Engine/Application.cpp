@@ -8,7 +8,7 @@ bool Application::Initialisation()
 {
 	Log::OpenFile("OM_Engine.log");
 
-	m_window = Wrapper::Window::Get_instance();
+	m_window = Wrapper::Window::Get_Instance();
 	if (!m_window->Initialisation())
 		return false;
 
@@ -33,7 +33,7 @@ void Application::Destroy()
 	Log::CloseFile();
 }
 
-const bool Application::Window_should_close() const
+const bool Application::Window_Should_Close() const
 {
-	return m_window->Window_should_close();
+	return m_window->Window_Should_Close();
 }

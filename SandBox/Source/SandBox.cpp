@@ -13,7 +13,7 @@ int main()
     }
 
     // Game loop
-    while (!app.Window_should_close())
+    while (!app.Window_Should_Close())
     {
         app.Update();
         app.Render();

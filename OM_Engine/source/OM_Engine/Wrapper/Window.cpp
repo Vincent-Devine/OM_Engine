@@ -7,7 +7,7 @@
 namespace Wrapper
 {
 	// Instance
-	Window* Window::Get_instance()
+	Window* Window::Get_Instance()
 	{
 		if (!s_instance)
 			s_instance = new Window();
@@ -17,7 +17,7 @@ namespace Wrapper
 	// Behavior
 	bool Window::Initialisation()
 	{
-		glfwSetErrorCallback(Display_error);
+		glfwSetErrorCallback(Display_Error);
 		
 		if (glfwInit() == GLFW_FALSE)
 		{
@@ -38,7 +38,7 @@ namespace Wrapper
 		}
 
 		glfwMakeContextCurrent(m_window);
-		glfwSetKeyCallback(m_window, On_input);
+		glfwSetKeyCallback(m_window, On_Input);
 		
 		return true;
 	}
@@ -57,10 +57,10 @@ namespace Wrapper
 	{
 		glfwDestroyWindow(m_window);
 		glfwTerminate();
-		delete Get_instance();
+		delete Get_Instance();
 	}
 
-	const bool Window::Window_should_close() const
+	const bool Window::Window_Should_Close() const
 	{
 		bool closeWindow = glfwWindowShouldClose(m_window);
 		if (closeWindow)
@@ -70,12 +70,12 @@ namespace Wrapper
 	}
 
 	// GLFW
-	void Window::Display_error(int error, const char* description)
+	void Window::Display_Error(int error, const char* description)
 	{
 		LOG_ERROR("GLFW [" + std::to_string(error) + "] " + description);
 	}
 
-	void Window::On_input(GLFWwindow* window, int key, int scancode, int action, int mods)
+	void Window::On_Input(GLFWwindow* window, int key, int scancode, int action, int mods)
 	{
 		if (key == CLOSE_APP_KEY && action == CLOSE_APP_ACTION)
 			glfwSetWindowShouldClose(window, GLFW_TRUE);
