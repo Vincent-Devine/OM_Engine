@@ -9,12 +9,6 @@ namespace Wrapper
 {
 	class OM_ENGINE_API Window
 	{
-		// Instance
-	public:
-		static Window* Get_Instance();
-	private:
-		static inline Window* s_instance = nullptr;
-
 		// Behavior
 	public:
 		bool Initialisation();
@@ -23,6 +17,12 @@ namespace Wrapper
 		void Destroy();
 		
 		const bool Window_Should_Close() const;
+
+		// Instance
+	public:
+		static Window* Get_Instance();
+	private:
+		static inline Window* s_instance = nullptr;
 
 		// GLFW
 	private:

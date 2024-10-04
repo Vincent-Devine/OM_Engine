@@ -6,14 +6,6 @@
 
 namespace Wrapper
 {
-	// Instance
-	Window* Window::Get_Instance()
-	{
-		if (!s_instance)
-			s_instance = new Window();
-		return s_instance;
-	}
-
 	// Behavior
 	bool Window::Initialisation()
 	{
@@ -67,6 +59,14 @@ namespace Wrapper
 			LOG_INFO("Close window");
 
 		return closeWindow;
+	}
+
+	// Instance
+	Window* Window::Get_Instance()
+	{
+		if (!s_instance)
+			s_instance = new Window();
+		return s_instance;
 	}
 
 	// GLFW
