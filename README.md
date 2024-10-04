@@ -9,7 +9,7 @@ One More Engine is a 3D game engine made with Vulkan
 ## Getting Started
 ### Clone
 ```bash
-git clone --recurse-submodules git@github.com:Vincent-Devine/OM_Engine.git
+git clone git@github.com:Vincent-Devine/OM_Engine.git
 ```
 
 ## Technology
@@ -18,11 +18,15 @@ git clone --recurse-submodules git@github.com:Vincent-Devine/OM_Engine.git
 - Editor: [Visual Studio 2022](https://visualstudio.microsoft.com/fr/vs/)
 
 ### Library Used
-- Window: [GLFW](https://github.com/glfw/glfw) *submodule*
+- Window: [GLFW](https://github.com/glfw/glfw)
+- Log: [Log_System](https://github.com/Vincent-Devine/Log_System)
 
 ## Credit
 Author: **Vincent DEVINE**<br>
 Project Start: 09/29/2024
 
 ### Specials Thanks
-- [The Cherno](https://www.youtube.com/@TheCherno)
+- [Vulkan-Tutorial.com](https://vulkan-tutorial.com/Introduction)
+- [Introduction to vulkan by Intel](https://github.com/GameTechDev/IntroductionToVulkan)
+- [Youtuber: The Cherno](https://www.youtube.com/@TheCherno)
+- [Youtuber: Prog'Z](https://www.youtube.com/@ProgZ)

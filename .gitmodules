@@ -1,6 +1,0 @@
-[submodule "OM_Engine/third_party/Log_System"]
-	path = OM_Engine/third_party/Log_System
-	url = https://github.com/Vincent-Devine/Log_System.git
-[submodule "OM_Engine/third_party/glfw"]
-	path = OM_Engine/third_party/glfw
-	url = https://github.com/glfw/glfw.git
