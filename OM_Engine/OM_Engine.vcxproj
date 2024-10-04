@@ -151,6 +151,10 @@
     <ClInclude Include="source\framework.h" />
     <ClInclude Include="source\OM_Engine.hpp" />
     <ClInclude Include="source\OM_Engine\Base.hpp" />
+    <ClInclude Include="source\OM_Engine\Core\Engine.hpp" />
+    <ClInclude Include="source\OM_Engine\Core\Resource_Manager.hpp" />
+    <ClInclude Include="source\OM_Engine\Resource\I_Resource.hpp" />
+    <ClInclude Include="source\OM_Engine\Resource\Texture.hpp" />
     <ClInclude Include="source\OM_Engine\Utils.hpp" />
     <ClInclude Include="source\OM_Engine\Wrapper\Window.hpp" />
     <ClInclude Include="source\pch.h" />
@@ -158,6 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\dllmain.cpp" />
+    <ClCompile Include="source\OM_Engine\Core\Engine.cpp" />
+    <ClCompile Include="source\OM_Engine\Core\Resource_Manager.cpp" />
+    <ClCompile Include="source\OM_Engine\Resource\I_Resource.cpp" />
+    <ClCompile Include="source\OM_Engine\Resource\Texture.cpp" />
     <ClCompile Include="source\OM_Engine\Wrapper\Window.cpp" />
     <ClCompile Include="source\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

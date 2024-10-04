@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "OM_Engine/Application.hpp"
-
 #include <Log_System/Log.hpp>
+#include "OM_Engine/Core/Resource_Manager.hpp"
 
 // Behavior
 bool Application::Initialisation()
@@ -11,6 +11,9 @@ bool Application::Initialisation()
 	m_window = Wrapper::Window::Get_Instance();
 	if (!m_window->Initialisation())
 		return false;
+
+	Resource::I_Resource* resouce = Core::Resource_Manager::Get_Instance()->Use_Resource("", Resource::RESOURCE_TYPE::texture);
+	Core::Resource_Manager::Get_Instance()->Stop_Used_Resource(resouce);
 
 	LOG_INFO("initialisation complete");
 	return true;
