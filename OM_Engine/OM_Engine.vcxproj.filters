@@ -51,6 +51,21 @@
     <ClInclude Include="source\OM_Engine\Wrapper\RHI.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="source\OM_Engine\Math\Vector_2.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="source\OM_Engine\Math\Vector_3.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="source\OM_Engine\Math\Vector_4.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="source\OM_Engine\Math\Quaternion.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="source\OM_Engine\Math\Matrix_4x4.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\dllmain.cpp">
@@ -80,5 +95,22 @@
     <ClCompile Include="source\OM_Engine\Wrapper\RHI.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="source\OM_Engine\Math\Vector_2.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </None>
+    <None Include="source\OM_Engine\Math\Vector_3.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </None>
+    <None Include="source\OM_Engine\Math\Vector_4.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </None>
+    <None Include="source\OM_Engine\Math\Matrix_4x4.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </None>
+    <None Include="source\OM_Engine\Math\Quaternion.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </None>
   </ItemGroup>
 </Project>
