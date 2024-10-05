@@ -8,7 +8,7 @@ namespace Math
 	class Vector_3;
 	class Vector_4;
 	class Quaternion;
-	class OM_ENGINE_API Matrix_4x4 //line then column
+	class Matrix_4x4 //line then column
 	{
 		// Behavior
 	public:

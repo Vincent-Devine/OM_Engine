@@ -29,9 +29,13 @@ namespace Math
 	inline const Vector_2& Vector_2::Normalize(const Vector_2& vector)
 	{
 		float magnitude = Magnitude(vector);
-		if (magnitude > 0.f)
-			return Vector_2(vector.m_x / magnitude, vector.m_y / magnitude);
-		return Vector_2();
+		Vector_2 vector_normalize = vector;
+		if (magnitude != 0.f)
+		{
+			vector_normalize.m_x /= magnitude;
+			vector_normalize.m_y /= magnitude;
+		}
+		return vector_normalize;
 	}
 
 	// Utils

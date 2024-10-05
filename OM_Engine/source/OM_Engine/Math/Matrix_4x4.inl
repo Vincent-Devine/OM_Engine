@@ -1,6 +1,5 @@
 #pragma once
 
-#include <Log_System/Log.hpp>
 #include "OM_Engine/Math/Vector_3.hpp"
 #include "OM_Engine/Math/Vector_4.hpp"
 #include "OM_Engine/Math/Quaternion.hpp"
@@ -72,20 +71,19 @@ namespace Math
 	{
 		Matrix_4x4 inverse;
 		float determinant = Determinant();
+
 		if (determinant == 0)
-		{
 			return Matrix_4x4::Identity();
-		}
+
 		Matrix_4x4 cofactor_matrix = Cofactor_Matrix();
 		cofactor_matrix.Transpose();
 		cofactor_matrix = cofactor_matrix * (1.f / determinant);
 		for (int i = 0; i < 4; i++)
 		{
 			for (int j = 0; j < 4; j++)
-			{
 				inverse.m_data[i][j] = cofactor_matrix.m_data[i][j];
-			}
 		}
+
 		return inverse;
 	}
 
@@ -285,10 +283,7 @@ namespace Math
 	{
 		Matrix_4x4 local_matrix(transform);
 		if (local_matrix.m_data[3][3] <= 0.001f && local_matrix.m_data[3][3] >= -0.001f)
-		{
-			LOG_WARNING("Decompose error");
 			return;
-		}
 
 		translation = Math::Vector_3(local_matrix.m_data[3][0], local_matrix.m_data[3][1], local_matrix.m_data[3][2]);
 

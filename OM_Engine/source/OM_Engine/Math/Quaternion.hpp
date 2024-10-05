@@ -7,7 +7,7 @@ namespace Math
 {
     class Vector_3;
     class Matrix_4x4;
-	class OM_ENGINE_API Quaternion
+	class Quaternion
 	{
         // Behavior
     public:
