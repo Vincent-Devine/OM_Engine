@@ -30,6 +30,8 @@ directly to the SDK path.<br>
 - Graphic API: [Vulkan](https://vulkan.lunarg.com/home/welcome) *v1.3.236.0*
 - Window: [GLFW](https://github.com/glfw/glfw) *v3.4*
 - Log: [Log_System](https://github.com/Vincent-Devine/Log_System) *v1.0*
+- Texture loader: [stb_image](https://github.com/nothings/stb) *v2.28*
+- Unit test: [GoogleTest](https://github.com/google/googletest) *v1.15.2*
 
 ## Credit
 Author: **Vincent DEVINE**<br>
