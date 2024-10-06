@@ -1,6 +1,7 @@
 #include "pch.h"
-#include "OM_Engine/Application.hpp"
 #include <Log_System/Log.hpp>
+#include "OM_Engine/Application.hpp"
+#include "OM_Engine/Core/Thread_Pool.hpp"
 #include "OM_Engine/Core/Resource_Manager.hpp"
 
 // Behavior
@@ -12,26 +13,35 @@ bool Application::Initialisation()
 	if (!m_window->Initialisation())
 		return false;
 
-	Resource::I_Resource* resouce = Core::Resource_Manager::Get_Instance()->Use_Resource("", Resource::RESOURCE_TYPE::texture);
-	Core::Resource_Manager::Get_Instance()->Stop_Used_Resource(resouce);
+	m_rhi = Wrapper::RHI::Get_Instance();
+	if (!m_rhi->Initialisation())
+		return false;
 
+	Core::Thread_Pool::Get_Instance()->Initialisation();
 	LOG_INFO("initialisation complete");
+
+	Core::Resource_Manager::Get_Instance()->Use_Resource("assets/Texture/knaki.jpg", Resource::RESOURCE_TYPE::texture);
+
 	return true;
 }
 
 void Application::Update()
 {
 	m_window->Update();
+	m_rhi->Update();
 }
 
 void Application::Render() const
 {
 	m_window->Render();
+	m_rhi->Render();
 }
 
 void Application::Destroy()
 {
+	m_rhi->Destroy();
 	m_window->Destroy();
+	Core::Thread_Pool::Get_Instance()->Destroy();
 	LOG_INFO("destroy complete");
 	Log::CloseFile();
 }

@@ -17,6 +17,8 @@ namespace Wrapper
 			return false;
 		}
 
+		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API); // tell glfw is no OpenGL context
+		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, GLFW_MAJOR_VERSION);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, GLFW_MINOR_VERSION);
 
@@ -29,7 +31,7 @@ namespace Wrapper
 			return false;
 		}
 
-		glfwMakeContextCurrent(m_window);
+		// glfwMakeContextCurrent(m_window);
 		glfwSetKeyCallback(m_window, On_Input);
 		
 		return true;
@@ -42,7 +44,7 @@ namespace Wrapper
 
 	void Window::Render() const
 	{
-		glfwSwapBuffers(m_window);
+		// glfwSwapBuffers(m_window);
 	}
 
 	void Window::Destroy()
