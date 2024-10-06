@@ -2,6 +2,7 @@
 
 #include "OM_Engine/Resource/Texture.hpp"
 #include <Log_System/Log.hpp>
+#include "OM_Engine/Wrapper/Loader_Texture.hpp"
 
 namespace Resource
 {
@@ -19,19 +20,20 @@ namespace Resource
 	const bool Texture::Load_From_File()
 	{
 		m_is_initialisate = false;
-		// load from file (call wrapper)
+		m_data = Wrapper::Load_Texture(m_path, &m_witdh, &m_height, &m_channels);
 		if (!m_data)
 		{
-			LOG_WARNING("texture[ " + std::to_string(m_id) + "] " + m_name + " failed to load");
+			LOG_WARNING("texture[" + std::to_string(m_id) + "] " + m_name + " failed to load");
 			return false;
 		}
+		LOG_DEBUG("finish load texture: " + m_path);
 		return true;
 	}
 
 	const bool Texture::Load_In_RHI()
 	{
 		// call rhi
-		// release texture data
+		Wrapper::Release_Texture(m_data);
 		m_is_initialisate = true;
 		return true;
 	}

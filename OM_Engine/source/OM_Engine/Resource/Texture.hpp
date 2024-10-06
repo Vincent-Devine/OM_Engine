@@ -1,11 +1,11 @@
 #pragma once
 
 #include "OM_Engine/Base.hpp"
-#include "OM_Engine/Resource/I_Resource.hpp"
+#include "OM_Engine/Resource/iResource.hpp"
 
 namespace Resource
 {
-	class OM_ENGINE_API Texture : public I_Resource
+	class OM_ENGINE_API Texture : public iResource
 	{
 		// Behavior
 	public:

@@ -5,11 +5,11 @@
 
 namespace Resource
 {
-	class OM_ENGINE_API I_Resource
+	class OM_ENGINE_API iResource
 	{
 		// Behavior
 	public:
-		virtual ~I_Resource() {}
+		virtual ~iResource() {}
 		virtual const bool Load_From_File() { return true; }
 		virtual const bool Load_In_RHI() { return true; }
 		virtual void Unload() {}
